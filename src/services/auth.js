@@ -7,5 +7,9 @@ import {
 } from "firebase/auth";
 
 export const register = async (email, password) => {
-  return await createUserWithEmailAndPassword(auth, email, password);
+  try {
+    return await createUserWithEmailAndPassword(auth, email, password);
+  } catch (error) {
+    console.log(error);
+  }
 };
