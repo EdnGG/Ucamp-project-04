@@ -1,6 +1,13 @@
+// Firebase 9
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+
+// Firebase 8
+// import firebase from "firebase/app";
+// import "firebase/firestore";
+// import "firebase/auth";
+// import "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -12,9 +19,13 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-// initializeApp(firebaseConfig);
-// export const auth = getAuth();
-// export const db = getFirestore();
+// firebase.initializeApp(firebaseConfig);
+// export const db = firebase.firestore();
+// export const auth = firebase.auth();
+// export const storage = firebase.storage();
+
+// const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+export const db = getFirestore();
+// export const auth = getAuth(app);
