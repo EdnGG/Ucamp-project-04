@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Register from "../components/Register";
 import Footer from "../components/Footer";
 import CarouselFade from "../components/CarouselFade";
-import Data from "../components/Data";
+// import Data from "../components/Data";
 
 const index = () => {
   return (
@@ -19,7 +19,7 @@ const index = () => {
 
         <div className="form">
           <Register />
-          <Data />
+          {/* <Data /> */}
         </div>
       </div>
 
