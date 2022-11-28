@@ -13,3 +13,19 @@ export const register = async (email, password) => {
     console.log(error);
   }
 };
+
+export const login = async (email, password) => {
+  try {
+    return await signInWithEmailAndPassword(auth, email, password);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const logout = async () => {
+  try {
+    return await signOut(auth);
+  } catch (error) {
+    console.log(error);
+  }
+};

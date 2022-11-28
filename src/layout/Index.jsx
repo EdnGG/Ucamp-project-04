@@ -19,7 +19,7 @@ const index = () => {
 
         <div className="form">
           <Register />
-          {/* <Data /> */}
+          <Data />
         </div>
       </div>
 

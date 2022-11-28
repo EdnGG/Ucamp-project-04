@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../../src/firebase";
+// import { getData } from "../services/user.js";
 // firebase 9
 import { collection, getDocs, onSnapshot } from "firebase/firestore";
 
@@ -32,6 +33,7 @@ const Data = () => {
   // };
 
   useEffect(() => {
+    // setData(getData("users"));
     getData();
   }, []);
 
