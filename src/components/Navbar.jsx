@@ -16,11 +16,6 @@ const Navbar = () => {
           <ul className="navbar__list">
             <li className="navbar__links">
               <a className="navbar__link" href="#">
-                Home
-              </a>
-            </li>
-            <li className="navbar__links">
-              <a className="navbar__link" href="#">
                 About
               </a>
             </li>

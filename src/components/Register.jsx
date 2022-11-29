@@ -41,29 +41,29 @@ const Register = () => {
     <div>
       <Form onSubmit={sendUser}>
         <Form.Group className="mb-3" controlId="formGroupName">
-          <Form.Label>Name</Form.Label>
+          {/* <Form.Label>Name</Form.Label> */}
           <Form.Control
             name="username"
             type="text"
-            placeholder="Name"
+            placeholder="Your name"
             onChange={handleChange}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupEmail">
-          <Form.Label>Email</Form.Label>
+          {/* <Form.Label>Email</Form.Label> */}
           <Form.Control
             name="email"
             type="email"
-            placeholder="Enter email"
+            placeholder="Your email"
             onChange={handleChange}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPassword">
-          <Form.Label>Password</Form.Label>
+          {/* <Form.Label>Password</Form.Label> */}
           <Form.Control
-            name="password"
-            type="password"
-            placeholder="Password"
+            name="phone"
+            type="text"
+            placeholder="Your phone"
             onChange={handleChange}
           />
         </Form.Group>

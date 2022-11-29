@@ -23,6 +23,17 @@ const index = () => {
         </div>
       </div>
 
+      <div className="container__sub-main">
+        <div className="carousel">
+          <CarouselFade />
+        </div>
+
+        <div className="form">
+          <Register />
+          {/* <Data /> */}
+        </div>
+      </div>
+
       <div className="container__footer">
         <Footer />
       </div>
