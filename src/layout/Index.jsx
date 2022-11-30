@@ -4,6 +4,8 @@ import Register from "../components/Register";
 import Footer from "../components/Footer";
 import CarouselFade from "../components/CarouselFade";
 // import Data from "../components/Data";
+import CardDescription from "../components/CardDescription";
+import CardForm from "../components/CardForm";
 
 const index = () => {
   return (
@@ -18,19 +20,19 @@ const index = () => {
         </div>
 
         <div className="form">
-          <Register />
+          <CardDescription />
+          {/* <Register /> */}
           {/* <Data /> */}
         </div>
       </div>
 
       <div className="container__sub-main">
-        <div className="carousel">
-          <CarouselFade />
+        <div className="form">
+          <CardForm />
         </div>
 
-        <div className="form">
+        <div className="form-user">
           <Register />
-          {/* <Data /> */}
         </div>
       </div>
 
