@@ -3,10 +3,23 @@ import {
   // getFirestore,
   collection,
   // getDocs,
-  // doc,
-  // setDoc,
+  doc,
+  setDoc,
   onSnapshot,
 } from "firebase/firestore";
+
+export const sendUserMessage = async (email, username, message) => {
+  try {
+    console.log("email, username, message: ", email, username, message);
+    await setDoc(doc(db, "messages", email, username, message), {
+      email,
+      username,
+      message,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const getData = async (collectionName) => {
   try {

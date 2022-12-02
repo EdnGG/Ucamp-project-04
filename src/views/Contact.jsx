@@ -3,14 +3,14 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 
-import { register } from "../services/auth";
+import { sendUserMessage } from "../services/user";
 
 const Contact = () => {
   //  States
-  const [user, setUser] = useState({
+  const [userMessage, setUserMessage] = useState({
     username: "",
     email: "",
-    password: "",
+    message: "",
   });
   const [show, setShow] = useState(false);
   // End States
@@ -18,28 +18,36 @@ const Contact = () => {
   const handleChange = (e) => {
     const key = e.target.name;
     const value = e.target.value;
-    setUser({
-      ...user,
+    setUserMessage({
+      ...userMessage,
       [key]: value,
     });
   };
-  const sendUser = async (e) => {
+  const sendMessage = async (e) => {
     e.preventDefault();
-    if (user.email === "" || user.password === "" || user.username === "") {
+    if (
+      userMessage.email === "" ||
+      userMessage.message === "" ||
+      userMessage.username === ""
+    ) {
       setShow(true);
       return;
     }
-    await register(user.email, user.password);
-    setUser({
+    await sendUserMessage(
+      userMessage.email,
+      userMessage.username,
+      userMessage.message
+    );
+    setUserMessage({
       username: "",
       email: "",
-      password: "",
+      message: "",
     });
   };
 
   return (
     <div>
-      <Form onSubmit={sendUser}>
+      <Form onSubmit={sendMessage}>
         <Form.Group className="mb-3" controlId="formGroupName">
           {/* <Form.Label>Name</Form.Label> */}
           <Form.Control
@@ -58,15 +66,17 @@ const Contact = () => {
             onChange={handleChange}
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formGroupPassword">
-          {/* <Form.Label>Password</Form.Label> */}
+
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Message</Form.Label>
           <Form.Control
-            name="phone"
-            type="text"
-            placeholder="Your phone"
+            as="textarea"
+            name="message"
+            rows={3}
             onChange={handleChange}
           />
         </Form.Group>
+
         <Button variant="primary" type="submit">
           Send
         </Button>
