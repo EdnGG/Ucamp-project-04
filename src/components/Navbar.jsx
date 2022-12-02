@@ -16,17 +16,17 @@ const Navbar = () => {
         <div className="navbar__menu">
           <ul className="navbar__list">
             <li className="navbar__links">
-              <Link className="navbar__link" href="#">
+              <Link to="/about" className="navbar__link" href="#">
                 About
               </Link>
             </li>
             <li className="navbar__links">
-              <Link className="navbar__link" href="#">
+              <Link to="/menu" className="navbar__link" href="#">
                 Menu
               </Link>
             </li>
             <li className="navbar__links">
-              <Link className="navbar__link" href="#">
+              <Link to="/contact" className="navbar__link" href="#">
                 Contact
               </Link>
             </li>
