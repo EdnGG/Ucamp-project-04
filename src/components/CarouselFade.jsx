@@ -11,8 +11,8 @@ function CarouselFade() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>label 1</h3>
+          <p>image 1</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -23,8 +23,8 @@ function CarouselFade() {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>label 2</h3>
+          <p>image 2</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -35,10 +35,8 @@ function CarouselFade() {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>label 3</h3>
+          <p>image 3</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

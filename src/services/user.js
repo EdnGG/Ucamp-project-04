@@ -11,7 +11,7 @@ import {
 export const sendUserMessage = async (email, username, message) => {
   try {
     console.log("email, username, message: ", email, username, message);
-    await setDoc(doc(db, "messages", email, username, message), {
+    await setDoc(doc(db, "messages", "user"), {
       email,
       username,
       message,

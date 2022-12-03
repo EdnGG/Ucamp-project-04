@@ -116,17 +116,33 @@
   width: 100%;
   height: 100%;
 }
-.form {
+.card-description {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: white;
-  padding: 31px; /* Needs to check*/
+  color: rgb(195, 224, 230);
+  /* padding: 31px; */
+  padding: 13px;
+  margin: 13px;
   font-weight: 900;
   width: 100%;
   height: 100%;
-  background-color: rgb(229, 237, 238);
+  background-color: rgb(85, 193, 247);
+}
+/*  */
+.card-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(25, 7, 7);
+  font-weight: 900;
+  padding: 10px;
+  margin: 10px;
+  width: 96.5%;
+  height: 100%;
+  background-color: rgb(232, 244, 248);
 }
 .carousel__img {
   object-fit: cover;
@@ -216,6 +232,8 @@
   font-weight: 900;
   width: 100%;
   height: 100%;
+  padding: 39px;
+  margin: 39px;
 }
 .container__card-description-title {
   display: flex;
@@ -248,6 +266,8 @@
   font-weight: 900;
   width: 100%;
   height: 100%;
+  padding: 5px;
+  margin: 5px;
 }
 .container__card-form-title {
   display: flex;
@@ -264,8 +284,51 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: rgb(194, 190, 190);
+  font-weight: 900;
+  width: 100%;
+  height: 100%;
+}
+.container__card-form-content-icon {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(194, 190, 190);
+  font-weight: 900; */
+  width: 7%;
+  height: 7%;
+}
+.container__card-description-reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   color: rgb(31, 13, 13);
   font-weight: 900;
   width: 100%;
   height: 100%;
+}
+.container__card-description-reviews-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(31, 13, 13);
+  font-weight: 900;
+  width: 100%;
+  height: 100%;
+}
+
+.container__contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(31, 13, 13);
+  font-weight: 900;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 20px;
 }

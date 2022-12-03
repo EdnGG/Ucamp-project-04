@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Register from "../components/Register";
+import Contact from "../views/Contact";
 import Footer from "../components/Footer";
 import CarouselFade from "../components/CarouselFade";
 // import Data from "../components/Data";
@@ -19,7 +20,7 @@ const index = () => {
           <CarouselFade />
         </div>
 
-        <div className="form">
+        <div className="card-description">
           <CardDescription />
           {/* <Register /> */}
           {/* <Data /> */}
@@ -27,12 +28,13 @@ const index = () => {
       </div>
 
       <div className="container__sub-main">
-        <div className="form">
+        <div className="card-form">
           <CardForm />
         </div>
 
         <div className="form-user">
-          <Register />
+          {/* <Register /> */}
+          <Contact />
         </div>
       </div>
 

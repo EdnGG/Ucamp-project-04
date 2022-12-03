@@ -13,6 +13,7 @@ const Contact = () => {
     message: "",
   });
   const [show, setShow] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   // End States
 
   const handleChange = (e) => {
@@ -34,8 +35,8 @@ const Contact = () => {
       return;
     }
     await sendUserMessage(
-      userMessage.email,
       userMessage.username,
+      userMessage.email,
       userMessage.message
     );
     setUserMessage({
@@ -43,10 +44,13 @@ const Contact = () => {
       email: "",
       message: "",
     });
+    setShowSuccess(true);
+    e.target.reset();
   };
 
   return (
-    <div>
+    <div className="container__contact-form">
+      <h1 className="p-4">Estamos felices de escuchar tus comentarios!!</h1>
       <Form onSubmit={sendMessage}>
         <Form.Group className="mb-3" controlId="formGroupName">
           {/* <Form.Label>Name</Form.Label> */}
@@ -93,6 +97,24 @@ const Contact = () => {
           Please fill all the fields to register in the app.
         </Alert.Heading>
       </Alert>
+
+      <Alert
+        show={showSuccess}
+        variant="primary"
+        onClick={() => setShowSuccess(false)}
+        className="alert__success"
+        dismissible
+      >
+        <Alert.Heading className="alert__heading">
+          Thanks for the feedback! Well get back to you as soon as possible.
+        </Alert.Heading>
+      </Alert>
+
+      {/* <div>
+        <Button variant="primary" type="button">
+          Go back
+        </Button>
+      </div> */}
     </div>
   );
 };

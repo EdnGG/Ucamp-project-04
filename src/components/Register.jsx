@@ -35,6 +35,7 @@ const Register = () => {
       email: "",
       password: "",
     });
+    e.target.reset();
   };
 
   return (
