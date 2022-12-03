@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
@@ -13,6 +14,7 @@ const Register = () => {
     password: "",
   });
   const [show, setShow] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   // End States
 
   const handleChange = (e) => {
@@ -35,18 +37,20 @@ const Register = () => {
       email: "",
       password: "",
     });
+    setShowSuccess(true);
     e.target.reset();
   };
 
   return (
-    <div>
+    <div className="container__contact-form">
+      <h1 className="p-4">Sign up</h1>
       <Form onSubmit={sendUser}>
         <Form.Group className="mb-3" controlId="formGroupName">
           {/* <Form.Label>Name</Form.Label> */}
           <Form.Control
             name="username"
             type="text"
-            placeholder="Your name"
+            placeholder="Name"
             onChange={handleChange}
           />
         </Form.Group>
@@ -55,16 +59,16 @@ const Register = () => {
           <Form.Control
             name="email"
             type="email"
-            placeholder="Your email"
+            placeholder="Email"
             onChange={handleChange}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPassword">
           {/* <Form.Label>Password</Form.Label> */}
           <Form.Control
-            name="phone"
+            name="password"
             type="text"
-            placeholder="Your phone"
+            placeholder="Password"
             onChange={handleChange}
           />
         </Form.Group>
@@ -84,6 +88,25 @@ const Register = () => {
           Please fill all the fields to register in the app.
         </Alert.Heading>
       </Alert>
+
+      <Alert
+        show={showSuccess}
+        variant="primary"
+        onClick={() => setShowSuccess(false)}
+        className="alert__success"
+        dismissible
+      >
+        <Alert.Heading className="alert__heading">
+          You have been registered successfully.
+        </Alert.Heading>
+      </Alert>
+      <div className="mt-4">
+        <Link to="/" className="navbar__link" href="#">
+          <Button variant="secondary" type="button">
+            Go back
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };

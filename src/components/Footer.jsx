@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import {
   MDBFooter,
   MDBContainer,
@@ -17,9 +19,11 @@ const Footer = () => {
         <section className="">
           <p className="d-flex justify-content-center align-items-center">
             <span className="me-3">Register for free</span>
-            <MDBBtn type="button" outline color="light" rounded>
-              Sign up!
-            </MDBBtn>
+            <Link to="/register" className="navbar__link" href="#">
+              <MDBBtn type="button" outline color="light" rounded>
+                Sign up!
+              </MDBBtn>
+            </Link>
           </p>
         </section>
       </MDBContainer>

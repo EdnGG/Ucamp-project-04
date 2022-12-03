@@ -6,6 +6,7 @@ import About from "./views/About";
 import Menu from "./views/Menu";
 import Contact from "./views/Contact";
 import Undefined from "./views/Undefined";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <Route exact path="/" element={<Index />}></Route>
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="*" element={<Undefined />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="*" element={<Undefined />} />
       </Routes>
       {/* <Index /> */}
     </div>
