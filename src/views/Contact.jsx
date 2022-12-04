@@ -37,15 +37,17 @@ const Contact = () => {
     await sendUserMessage(
       userMessage.username,
       userMessage.email,
-      userMessage.message
+      userMessage.message,
+      userMessage.username
     );
+    e.target.reset();
     setUserMessage({
       username: "",
       email: "",
       message: "",
     });
     setShowSuccess(true);
-    e.target.reset();
+    console.log("userMessage: ", userMessage);
   };
 
   return (

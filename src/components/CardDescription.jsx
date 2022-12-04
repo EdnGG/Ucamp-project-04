@@ -21,20 +21,20 @@ const CardDescription = () => {
       <div className="mt-10">
         <div className="container__card-description-reviews">
           <div className="container__card-description-reviews-container">
-            <dt class="text-base font-medium text-black-500">Nacimiento</dt>
-            <dd class="mt-1 text-3xl ">2002</dd>
+            <dt className="text-base font-medium text-black-500">Nacimiento</dt>
+            <dd className="mt-1 text-3xl ">2002</dd>
           </div>
           <div className="container__card-description-reviews-container">
-            <dt class="text-base font-medium text-black-500">Rating</dt>
-            <dd class="text-3xl font-extrabold ">★★★★★</dd>
+            <dt className="text-base font-medium text-black-500">Rating</dt>
+            <dd className="text-3xl font-extrabold ">★★★★★</dd>
           </div>
           <div className="container__card-description-reviews-container">
-            <dt class="text-base font-medium text-white-500">Ubicación</dt>
-            <dd class="text-3xl font-extrabold ">Ciudad de México</dd>
+            <dt className="text-base font-medium text-white-500">Ubicación</dt>
+            <dd className="text-3xl font-extrabold ">Ciudad de México</dd>
           </div>
           <div className="container__card-description-reviews-container">
-            <dt class="text-base font-medium text-white-500">Raised</dt>
-            <dd class="text-3xl font-extrabold ">$25M</dd>
+            <dt className="text-base font-medium text-white-500">Raised</dt>
+            <dd className="text-3xl font-extrabold ">$25M</dd>
           </div>
         </div>
       </div>

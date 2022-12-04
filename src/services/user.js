@@ -8,10 +8,14 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 
-export const sendUserMessage = async (email, username, message) => {
+export const sendUserMessage = async (
+  email,
+  username,
+  message,
+  collectionName
+) => {
   try {
-    console.log("email, username, message: ", email, username, message);
-    await setDoc(doc(db, "messages", "user"), {
+    await setDoc(doc(db, "messages", collectionName), {
       email,
       username,
       message,

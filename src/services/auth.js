@@ -8,6 +8,7 @@ import {
 
 export const register = async (email, password) => {
   try {
+    console.log("desde auth: ", email, password);
     return await createUserWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.log(error);
