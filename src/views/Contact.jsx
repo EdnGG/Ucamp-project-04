@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
@@ -6,6 +7,7 @@ import Alert from "react-bootstrap/Alert";
 import { sendUserMessage } from "../services/user";
 
 const Contact = () => {
+  const navigate = useNavigate();
   //  States
   const [userMessage, setUserMessage] = useState({
     username: "",
@@ -40,14 +42,17 @@ const Contact = () => {
       userMessage.message,
       userMessage.username
     );
-    e.target.reset();
     setUserMessage({
       username: "",
       email: "",
       message: "",
     });
     setShowSuccess(true);
-    console.log("userMessage: ", userMessage);
+    e.target.reset();
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);
+    // console.log("userMessage: ", userMessage);
   };
 
   return (
@@ -55,7 +60,6 @@ const Contact = () => {
       <h1 className="p-4">Estamos felices de escuchar tus comentarios!!</h1>
       <Form onSubmit={sendMessage}>
         <Form.Group className="mb-3" controlId="formGroupName">
-          {/* <Form.Label>Name</Form.Label> */}
           <Form.Control
             name="username"
             type="text"
@@ -64,7 +68,6 @@ const Contact = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupEmail">
-          {/* <Form.Label>Email</Form.Label> */}
           <Form.Control
             name="email"
             type="email"

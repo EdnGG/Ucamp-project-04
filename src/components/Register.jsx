@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
@@ -7,6 +7,7 @@ import Alert from "react-bootstrap/Alert";
 import { register } from "../services/auth";
 
 const Register = () => {
+  const navigate = useNavigate();
   //  States
   const [user, setUser] = useState({
     username: "",
@@ -39,6 +40,9 @@ const Register = () => {
     });
     setShowSuccess(true);
     e.target.reset();
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);
   };
 
   return (
@@ -46,7 +50,6 @@ const Register = () => {
       <h1 className="p-4">Sign up</h1>
       <Form onSubmit={sendUser}>
         <Form.Group className="mb-3" controlId="formGroupName">
-          {/* <Form.Label>Name</Form.Label> */}
           <Form.Control
             name="username"
             type="text"
@@ -55,7 +58,6 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupEmail">
-          {/* <Form.Label>Email</Form.Label> */}
           <Form.Control
             name="email"
             type="email"
@@ -64,7 +66,6 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPassword">
-          {/* <Form.Label>Password</Form.Label> */}
           <Form.Control
             name="password"
             type="text"

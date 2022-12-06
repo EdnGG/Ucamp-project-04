@@ -9,6 +9,7 @@ import Undefined from "./views/Undefined";
 import Register from "./components/Register";
 
 function App() {
+  const [user, setUser] = React.useState(null);
   return (
     <div className="App">
       <Routes>
@@ -19,7 +20,6 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<Undefined />} />
       </Routes>
-      {/* <Index /> */}
     </div>
   );
 }
